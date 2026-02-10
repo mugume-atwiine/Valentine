@@ -69,6 +69,9 @@
 </head>
 <body>
   <div class="card">
+    <audio id="bgMusic" loop muted>
+      <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_0a8c0e5b9f.mp3" type="audio/mpeg">
+    </audio>
     <h1>Hey Doleki ❤️</h1>
     <p id="question">Doleki, will you be my Valentine?</p>
 
@@ -93,6 +96,16 @@
       "Pretty please? 😇",
       "I’ll ask forever 😌"
     ];
+
+    const music = document.getElementById('bgMusic');
+
+    // Start music after first user interaction (browser-friendly)
+    document.addEventListener('click', () => {
+      if (music.muted) {
+        music.muted = false;
+        music.play().catch(() => {});
+      }
+    }, { once: true });
 
     function sayYes() {
       document.getElementById('buttons').classList.add('hidden');
@@ -130,3 +143,4 @@
   </script>
 </body>
 </html>
+
