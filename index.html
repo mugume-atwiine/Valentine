@@ -84,16 +84,10 @@
     <div id="result" class="hidden">
       <h1>Yaaay! 💕</h1>
       <p>You just made my Valentine perfect 😍</p>
-      <img id="finalGif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3VtZ3Nod2h4b2V2N3ZkZG5jNnJpM2d6ZTR1ZHF2b3F6b3R0bCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/MDJ9IbxxvDUQM/giphy.gif" alt="Happy Valentine GIF" />
-
-      <video id="finalVideo" class="hidden" controls style="margin-top:20px;width:100%;border-radius:14px;">
-        <source src="final.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
+      <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3VtZ3Nod2h4b2V2N3ZkZG5jNnJpM2d6ZTR1ZHF2b3F6b3R0bCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/MDJ9IbxxvDUQM/giphy.gif" alt="Happy Valentine GIF" />
       <p style="margin-top:20px;font-size:1.1rem;">
         With all my love ❤️<br />
-        <strong>— Mugume</strong>
+        <strong>— Atwiine</strong>
       </p>
     </div>
   </div>
@@ -122,15 +116,6 @@
       document.getElementById('buttons').classList.add('hidden');
       document.getElementById('question').classList.add('hidden');
       document.getElementById('result').classList.remove('hidden');
-
-      // After GIF plays for a few seconds, show the video
-      setTimeout(() => {
-        const gif = document.getElementById('finalGif');
-        const video = document.getElementById('finalVideo');
-        gif.classList.add('hidden');
-        video.classList.remove('hidden');
-        video.play().catch(() => {});
-      }, 5000); // adjust time if needed
     }
 
     function sayNo() {
